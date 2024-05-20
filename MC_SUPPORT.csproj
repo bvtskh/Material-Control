@@ -1,0 +1,1154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C60FAA32-9D21-402F-86FC-E5A2FF27C48A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MC_SUPPORT</RootNamespace>
+    <AssemblyName>MC_SUPPORT</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>\\172.28.10.12\Share\18 IT\U23702%28quyetpv%29\PROGRAM\10.MC\MC_Vendor\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\172.28.10.12\Share\18 IT\U23702%28quyetpv%29\PROGRAM\10.MC\MC_Vendor\</InstallUrl>
+    <UpdateUrl>\\172.28.10.12\Share\18 IT\U23702%28quyetpv%29\PROGRAM\10.MC\MC_Vendor\</UpdateUrl>
+    <ProductName>MC-Support</ProductName>
+    <PublisherName>quyetpv%40umcvn.com</PublisherName>
+    <SuiteName>UMCVN</SuiteName>
+    <MinimumRequiredVersion>1.0.0.4</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>50</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1D7DB7B0A18A27513A89AEA80EF438350A7655C5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.2.27314.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DG.AdvancedDataGridView.1.2.27314.8\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.96.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.96.0\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Club.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DataAccess\Debug\Club.Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Club.Util, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DataAccess\Debug\Club.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.Contrib.1.60.1\lib\net451\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.16.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentFTP, Version=39.4.0.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>packages\FluentFTP.39.4.0\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI, Version=3.5.0.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb, processorArchitecture=MSIL">
+      <HintPath>packages\SunnyUI.3.5.0\lib\net40\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=5a271fb7ba597231, processorArchitecture=MSIL">
+      <HintPath>packages\SunnyUI.Common.3.5.0\lib\net40\SunnyUI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.Dynamic.1.0.8\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UMC.API.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\UMC.API.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="UMC.API.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\UMC.API.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Common.cs" />
+    <Compile Include="Business\CommPort.cs" />
+    <Compile Include="Business\Constant.cs" />
+    <Compile Include="Business\CsvHelper.cs" />
+    <Compile Include="Business\BomListHelper.cs" />
+    <Compile Include="Business\DXHelper.cs" />
+    <Compile Include="Business\ECOHelper.cs" />
+    <Compile Include="Business\ExcelHelper2.cs" />
+    <Compile Include="Business\FileHelper.cs" />
+    <Compile Include="Business\IronXLHelper.cs" />
+    <Compile Include="Business\Json.cs" />
+    <Compile Include="Business\Module.cs" />
+    <Compile Include="Business\Extensions.cs" />
+    <Compile Include="Business\ListtoDataTableConverter.cs" />
+    <Compile Include="Business\ReflectionExtensions.cs" />
+    <Compile Include="Business\SingletonHelper.cs" />
+    <Compile Include="Business\SystemSettings.cs" />
+    <Compile Include="Business\UmesHelper.cs" />
+    <Compile Include="Business\UsapHelper.cs" />
+    <Compile Include="Business\Validator.cs" />
+    <Compile Include="Connected Services\ErpService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PvsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UsapService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BaseContext.cs" />
+    <Compile Include="DAL\ErpHelper.cs" />
+    <Compile Include="DAL\SQLHelper.cs" />
+    <Compile Include="Entities\LineEntity.cs" />
+    <Compile Include="Entities\Log4Net.cs" />
+    <Compile Include="Entities\MachineDocumentLine.cs" />
+    <Compile Include="Entities\MaterialItem.cs" />
+    <Compile Include="Entities\QuotaEntity.cs" />
+    <Compile Include="Entities\ReturnStockEntity.cs" />
+    <Compile Include="Entities\TokusaiHis.cs" />
+    <Compile Include="Entities\LotPicture.cs" />
+    <Compile Include="Entities\TokusaiStock.cs" />
+    <Compile Include="Entities\Tokusai_GetCurrentLineConfirm.cs" />
+    <Compile Include="Entities\Tokusai_Item.cs" />
+    <Compile Include="Entities\WH_Tokusai.cs" />
+    <Compile Include="Entities\WH_LOTNG.cs" />
+    <Compile Include="Entities\WH_BCLBFLM_His.cs" />
+    <Compile Include="Entities\ERP_RULES.cs" />
+    <Compile Include="Entities\WH_Tokusai_His.cs" />
+    <Compile Include="Entities\WorkingOrder.cs" />
+    <Compile Include="FormTokusaiAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusaiAlarm.Designer.cs">
+      <DependentUpon>FormTokusaiAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTokusaiConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusaiConfirm.Designer.cs">
+      <DependentUpon>FormTokusaiConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fParam.Designer.cs">
+      <DependentUpon>fParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fECOChangingAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fECOChangingAdd.Designer.cs">
+      <DependentUpon>fECOChangingAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBomListSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBomListSearch.Designer.cs">
+      <DependentUpon>fBomListSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormECOChanging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormECOChanging.Designer.cs">
+      <DependentUpon>FormECOChanging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaterialOrderItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaterialOrderItem.Designer.cs">
+      <DependentUpon>FormMaterialOrderItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBomList.Designer.cs">
+      <DependentUpon>fBomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTokusaiConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTokusaiConfirm.Designer.cs">
+      <DependentUpon>fTokusaiConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddLotNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddLotNo.Designer.cs">
+      <DependentUpon>FormAddLotNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePass.Designer.cs">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateUser.Designer.cs">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaterialOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaterialOrder.Designer.cs">
+      <DependentUpon>FormMaterialOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fWO_Save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fWO_Save.Designer.cs">
+      <DependentUpon>fWO_Save.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMTReel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMTReel.Designer.cs">
+      <DependentUpon>SMTReel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListUser.Designer.cs">
+      <DependentUpon>FormListUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormECOStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormECOStock.Designer.cs">
+      <DependentUpon>FormECOStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPartUsap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartUsap.Designer.cs">
+      <DependentUpon>FormPartUsap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuota.Designer.cs">
+      <DependentUpon>FormQuota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormECOSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormECOSave.Designer.cs">
+      <DependentUpon>FormECOSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReturnStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReturnStock.Designer.cs">
+      <DependentUpon>FormReturnStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuotaSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuotaSave.Designer.cs">
+      <DependentUpon>FormQuotaSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTokusaiStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusaiStock.Designer.cs">
+      <DependentUpon>FormTokusaiStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTokusaiChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusaiChange.Designer.cs">
+      <DependentUpon>FormTokusaiChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRule.Designer.cs">
+      <DependentUpon>FormRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPartPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartPicture.Designer.cs">
+      <DependentUpon>FormPartPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTokusaiAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusaiAlert.Designer.cs">
+      <DependentUpon>FormTokusaiAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTokusaiHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusaiHistory.Designer.cs">
+      <DependentUpon>FormTokusaiHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTokusai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusai.Designer.cs">
+      <DependentUpon>FormTokusai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLotNoHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLotNoHistory.Designer.cs">
+      <DependentUpon>FormLotNoHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLotNoBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLotNoBlock.Designer.cs">
+      <DependentUpon>FormLotNoBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendorBarcode.Designer.cs">
+      <DependentUpon>FormVendorBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTokusaiSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTokusaiSave.Designer.cs">
+      <DependentUpon>FormTokusaiSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTP\OpenRead.cs" />
+    <Compile Include="FTP\UploadFileExample.cs" />
+    <Compile Include="FTP\UploadManyFiles.cs" />
+    <Compile Include="UpnDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpnDetails.Designer.cs">
+      <DependentUpon>UpnDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NativeWin32.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ultils.cs" />
+    <Compile Include="VendorBarCode.cs" />
+    <EmbeddedResource Include="FormTokusaiAlarm.resx">
+      <DependentUpon>FormTokusaiAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTokusaiConfirm.resx">
+      <DependentUpon>FormTokusaiConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fParam.resx">
+      <DependentUpon>fParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fECOChangingAdd.resx">
+      <DependentUpon>fECOChangingAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBomListSearch.resx">
+      <DependentUpon>fBomListSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormECOChanging.resx">
+      <DependentUpon>FormECOChanging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaterialOrderItem.resx">
+      <DependentUpon>FormMaterialOrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBomList.resx">
+      <DependentUpon>fBomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTokusaiConfirm.resx">
+      <DependentUpon>fTokusaiConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddLotNo.resx">
+      <DependentUpon>FormAddLotNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePass.resx">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateUser.resx">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaterialOrder.resx">
+      <DependentUpon>FormMaterialOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fWO_Save.resx">
+      <DependentUpon>fWO_Save.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMTReel.resx">
+      <DependentUpon>SMTReel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListUser.resx">
+      <DependentUpon>FormListUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormECOStock.resx">
+      <DependentUpon>FormECOStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartUsap.resx">
+      <DependentUpon>FormPartUsap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuota.resx">
+      <DependentUpon>FormQuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormECOSave.resx">
+      <DependentUpon>FormECOSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReturnStock.resx">
+      <DependentUpon>FormReturnStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuotaSave.resx">
+      <DependentUpon>FormQuotaSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTokusaiStock.resx">
+      <DependentUpon>FormTokusaiStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTokusaiChange.resx">
+      <DependentUpon>FormTokusaiChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRule.resx">
+      <DependentUpon>FormRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartPicture.resx">
+      <DependentUpon>FormPartPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTokusaiAlert.resx">
+      <DependentUpon>FormTokusaiAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTokusaiHistory.resx">
+      <DependentUpon>FormTokusaiHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTokusai.resx">
+      <DependentUpon>FormTokusai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLotNoHistory.resx">
+      <DependentUpon>FormLotNoHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLotNoBlock.resx">
+      <DependentUpon>FormLotNoBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorBarcode.resx">
+      <DependentUpon>FormVendorBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTokusaiSave.resx">
+      <DependentUpon>FormTokusaiSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpnDetails.resx">
+      <DependentUpon>UpnDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ErpService\ERPWebService.wsdl" />
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FeederEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FindFeederResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FindRankContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FindTokusaiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FixtureEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FixtureFindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FixtureGetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.FixtureSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.GetLastTestLogBySubboardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.GetLastTestLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.GetTestLogBySubboardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.GetTestLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.HRMEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.HRMGetByStaffCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.HRMGetListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.HRMSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.KyoMacAddrEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.KyoTestLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.LaserGetBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.LaserSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.RankledConfirmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.ResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.SaveTestLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.TestLogEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.ViPackingCountByWoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.ViPackingCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.ViPackingCountWithoutBoxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.ViPackingExistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.ViPackingIsRepairResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.ViPackingSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ErpService\MC_SUPPORT.ErpService.WH_TokusaiEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.BARCODE_RULESEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.BARCODE_RULE_ITEMSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.Base_ModelsEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.BOARDSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.BOARD_BIND_STATUSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.CheckRepairResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.CheckUserLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.ErpUserEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.FindListUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.FindUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBarcodeRuleEntityByRuleNOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBarcodeRuleItemsByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBarodeRuleItemsByRuleNoJsonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBarodeRuleItemsByRuleNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBarodeRuleItemsLikeNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBarodeRulesLikeNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBoardBinStatusByBoardNoAndOrderNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBoardBinStatusByBoardNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetBoardsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetEntityINSPECTION_PROCESSESResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetFirstBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetListBarodeRuleItemsStartWidthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetListBoardBinStatusByBaseNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetListBoardBinStatusByOrderNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetListINSPECTION_PROCESSESLikeKeywordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetListINSPECTION_PROCESSESStartWidthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetListModelLikeKeywordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetListModelStartWidthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetMacResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetModelbyModelNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetModelInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetModelInfosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetModelsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetReplacingLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetRoleMemberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetRuleNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetStationByHostNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetStationByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetStationNoLikeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetTotalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetUserByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetUserToJsonByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetWorkOrderItemByBoardNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetWorkOrderItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetWorkOrderProcedureByOrderIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetWorkOrderProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.GetWorkOrdersByOrderNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.InspectionOptionEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.INSPECTION_PROCESSESEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.INSPECTION_STATIONSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.KYOCERAEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.KyoGetBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.KyoGetMacResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.KyoMacEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.KyoRemoveBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.KyoSaveBoardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MasterEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MasterInfosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MasterRemoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MasterSavesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.ModelSavesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.ModelsEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MurataBarcodeExistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MurataGetPackByBoardNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MurataGetPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MurataModelCusExistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MurataRemoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MurataSavePackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.MuratasEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.NichiconBarcodeExistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.NichiconEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.NichiconGetPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.NichiconSavePackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.RegisterSoftInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.RemoveModelInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.REPLACING_LOGSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.ROLE_MEMBERSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.SaveModelInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.TestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.USERSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.WORK_ORDERSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.WORK_ORDER_ITEMSEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\MC_SUPPORT.PvsService.WORK_ORDER_PROCEDURESEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PvsService\PVSWebService.wsdl" />
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.BCLBFLMEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.DailyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.EMRMISMEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.FindTokusaiByEmNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.FindWoQtyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetActualProductResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetActualProductWidthKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetBcTokusaiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetByBcNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetByIssueSheetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetByTnNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetDataPointConfirmsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetDataPointsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetListByTnNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetListLocationByPartNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.GetListReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNoLockedFindLikeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNoLockedFindResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNoLockedHisGetAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNoLockedHisSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNoLockedRemoveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNoLockedSaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNo_LockedEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.LotNo_Locked_HisEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.MonthlyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.ResultEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.STR_WHLOCFMEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\MC_SUPPORT.UsapService.TokusaiFinishResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsapService\USAPWebService.wsdl" />
+    <None Include="MC_SUPPORT_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools-16.png" />
+    <None Include="Resources\folder-saved-search-16.png" />
+    <None Include="Resources\barcode-32.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Forward_Arrow_16px.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\connect-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-16.png" />
+    <None Include="Resources\icons8-arrow-301.png" />
+    <None Include="Resources\icons8-arrow-30.png" />
+    <None Include="Resources\icons8-confirm-32.png" />
+    <None Include="Resources\plus_16.png" />
+    <None Include="Resources\more_details_16px.png" />
+    <None Include="Resources\icons8-user-16.png" />
+    <None Include="Resources\versions_16px.png" />
+    <None Include="Resources\copyright_16px.png" />
+    <None Include="Resources\key_16px.png" />
+    <None Include="Resources\export_csv_16px1.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\trash-16.png" />
+    <None Include="Resources\import_csv_16px1.png" />
+    <None Include="Resources\icons8-edit-161.png" />
+    <None Include="Resources\icons8-edit-16.png" />
+    <None Include="Resources\export_csv_16px.png" />
+    <None Include="Resources\import_csv_16px.png" />
+    <None Include="Connected Services\UsapService\USAPWebService.disco" />
+    <None Include="Connected Services\UsapService\configuration91.svcinfo" />
+    <None Include="Connected Services\UsapService\configuration.svcinfo" />
+    <None Include="Connected Services\UsapService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PvsService\PVSWebService.disco" />
+    <None Include="Connected Services\PvsService\configuration91.svcinfo" />
+    <None Include="Connected Services\PvsService\configuration.svcinfo" />
+    <None Include="Connected Services\PvsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ErpService\ERPWebService.disco" />
+    <None Include="Connected Services\ErpService\configuration91.svcinfo" />
+    <None Include="Connected Services\ErpService\configuration.svcinfo" />
+    <None Include="Connected Services\ErpService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="DataAccess\Debug\Club.Framework.Data.dll" />
+    <Content Include="DataAccess\Debug\Club.Framework.Data.pdb" />
+    <Content Include="DataAccess\Debug\Club.Util.dll" />
+    <Content Include="DataAccess\Debug\Club.Util.Extension.dll" />
+    <Content Include="DataAccess\Debug\Club.Util.Extension.pdb" />
+    <Content Include="DataAccess\Debug\Club.Util.pdb" />
+    <Content Include="DataAccess\Debug\Newtonsoft.Json.dll" />
+    <Content Include="DataAccess\Debug\Newtonsoft.Json.xml" />
+    <Content Include="logo.ico" />
+    <None Include="Resources\refesh-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ErpService\" />
+    <WCFMetadataStorage Include="Connected Services\PvsService\" />
+    <WCFMetadataStorage Include="Connected Services\UsapService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.NETFramework.ReferenceAssemblies.net45.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net45.targets" Condition="Exists('packages\Microsoft.NETFramework.ReferenceAssemblies.net45.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net45.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.NETFramework.ReferenceAssemblies.net45.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net45.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NETFramework.ReferenceAssemblies.net45.1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net45.targets'))" />
+  </Target>
+</Project>

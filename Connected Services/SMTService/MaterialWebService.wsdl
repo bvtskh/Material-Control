@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SearchProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchProductsResult" type="tns:ArrayOfMATERIAL_DOCUMENTSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMATERIAL_DOCUMENTSEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MATERIAL_DOCUMENTSEntity" nillable="true" type="tns:MATERIAL_DOCUMENTSEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MATERIAL_DOCUMENTSEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPONENT_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CREATOR_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CREATOR_NAME" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CREATE_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CUSTOMER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CUSTOMER_NAME" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_READY" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LINE_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MODIFIER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MODIFIER_NAME" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MODIFY_TIME" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PRODUCT_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="REMARKS" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="VERSION" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseEntity" />
+      <s:element name="CheckPartExist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPartExistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckPartExistResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOrderItemsById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOrderItemsByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListOrderItemsByIdResult" type="tns:ArrayOfMATERIAL_ORDER_ITEMSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMATERIAL_ORDER_ITEMSEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MATERIAL_ORDER_ITEMSEntity" nillable="true" type="tns:MATERIAL_ORDER_ITEMSEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MATERIAL_ORDER_ITEMSEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ALTER_PART_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPONENT_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FEEDER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FEEDER_SPEC" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_LOADED" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_PRECHECKED" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_PREPARED" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_PREPARED_ONLINE" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_VERIFIED" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_VERIFIED_ONLINE" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="LAST_LOAD_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="MACHINE_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MACHINE_SETTING_NAME" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MACHINE_SLOT" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="MATERIAL_ORDER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PART_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PLAN_LOAD_TIME" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="QUANTITY" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="REQUIRED_QUANTITY" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="SUB_UNIT_QUANTITY" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="UNIT_QUANTITY" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="UPN_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="VPN_ID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="FindMaterialOrderItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lineId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindMaterialOrderItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindMaterialOrderItemResult" type="tns:ArrayOfMATERIAL_ORDER_ITEMSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOrderItemsByIdJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListOrderItemsByIdJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListOrderItemsByIdJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLineStartByLineId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lineID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLineStartByLineIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLineStartByLineIdResult" type="tns:MATERIAL_ORDERSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MATERIAL_ORDERSEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="BOARD_COUNT" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CHECK_REQ" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="COMPONENT_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CREATE_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CREATOR_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CREATOR_NAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CUSTOMER_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FINISH_TIME" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FINISHED_QUANTITY" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_EXCLUSIVE" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_FINISHED" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_READY" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_STARTED" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LINE_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LOADING_END_TIME" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LOADING_START_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="LOT_NO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MACHINE_DOCUMENT_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MODIFIER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MODIFIER_NAME" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MODIFY_TIME" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="PLAN_LOADING_TIME" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="PLAN_PREPARING_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PREPARING_END_TIME" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="PREPARING_START_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PROCEDURE_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PRODUCT_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PRODUCTION_ORDER_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="QUANTITY" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="REMARKS" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="START_TIME" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="VERSION" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="FindMaterialOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lineId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindMaterialOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindMaterialOrderResult" type="tns:MATERIAL_ORDERSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperationLogFailed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="materialOrderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperationLogFailedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OperationLogFailedResult" type="tns:ArrayOfOPERATION_LOGSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOPERATION_LOGSEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OPERATION_LOGSEntity" nillable="true" type="tns:OPERATION_LOGSEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OPERATION_LOGSEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ALTER_PART_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CUSTOMER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FAULT_REASON" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FEEDER_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_FAILED" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LINE_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LOT_NO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MACHINE_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MACHINE_SLOT" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="MATERIAL_ORDER_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="OPERATE_TIME" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="OPERATION" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="OPERATOR_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OPERATOR_NAME" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ORDER_QUANTITY" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="PART_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PRODUCT_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TASK" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="UPN_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UPN_QUANTITY" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="VENDOR_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="VENDOR_LOT" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="VPN_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PRODUCTION_ORDER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OLD_UPN_ID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="OperationLogBest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="materialOrderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lineID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperationLogBestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OperationLogBestResult" type="tns:ArrayOfOPERATION_LOGSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSteelMesh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="materialOrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSteelMeshResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSteelMeshResult" type="tns:STEEL_MESH_STATUSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="STEEL_MESH_STATUSEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="CHECK_STATE" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="MATERIAL_ORDER_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MESH_NO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PART_ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MAX_USE_COUNT" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="INPUT_TIME" nillable="true" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetMeshNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="materialOrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMeshNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMeshNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSqueegeeNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="materialOrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSqueegeeNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSqueegeeNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindSqueege">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lineId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindSqueegeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindSqueegeResult" type="tns:SQUEEGEE_STATUSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SQUEEGEE_STATUSEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SQUEEGEE_NO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MATERIAL_ORDER_ID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="FindSteelMesh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lineId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindSteelMeshResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindSteelMeshResult" type="tns:STEEL_MESH_STATUSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialLines">
+        <s:complexType />
+      </s:element>
+      <s:element name="MaterialLinesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaterialLinesResult" type="tns:ArrayOfMACHINESEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMACHINESEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MACHINESEntity" nillable="true" type="tns:MACHINESEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MACHINESEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DESCRIPTION" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IS_STARTED" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LINE_ID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SETTING_NAME" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchProducts" />
+  </wsdl:message>
+  <wsdl:message name="SearchProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckPartExistSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckPartExist" />
+  </wsdl:message>
+  <wsdl:message name="CheckPartExistSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckPartExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListOrderItemsByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListOrderItemsById" />
+  </wsdl:message>
+  <wsdl:message name="GetListOrderItemsByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListOrderItemsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindMaterialOrderItemSoapIn">
+    <wsdl:part name="parameters" element="tns:FindMaterialOrderItem" />
+  </wsdl:message>
+  <wsdl:message name="FindMaterialOrderItemSoapOut">
+    <wsdl:part name="parameters" element="tns:FindMaterialOrderItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListOrderItemsByIdJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListOrderItemsByIdJson" />
+  </wsdl:message>
+  <wsdl:message name="GetListOrderItemsByIdJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListOrderItemsByIdJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLineStartByLineIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLineStartByLineId" />
+  </wsdl:message>
+  <wsdl:message name="GetLineStartByLineIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLineStartByLineIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindMaterialOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:FindMaterialOrder" />
+  </wsdl:message>
+  <wsdl:message name="FindMaterialOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:FindMaterialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="OperationLogFailedSoapIn">
+    <wsdl:part name="parameters" element="tns:OperationLogFailed" />
+  </wsdl:message>
+  <wsdl:message name="OperationLogFailedSoapOut">
+    <wsdl:part name="parameters" element="tns:OperationLogFailedResponse" />
+  </wsdl:message>
+  <wsdl:message name="OperationLogBestSoapIn">
+    <wsdl:part name="parameters" element="tns:OperationLogBest" />
+  </wsdl:message>
+  <wsdl:message name="OperationLogBestSoapOut">
+    <wsdl:part name="parameters" element="tns:OperationLogBestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSteelMeshSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSteelMesh" />
+  </wsdl:message>
+  <wsdl:message name="GetSteelMeshSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSteelMeshResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMeshNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMeshNo" />
+  </wsdl:message>
+  <wsdl:message name="GetMeshNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMeshNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSqueegeeNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSqueegeeNo" />
+  </wsdl:message>
+  <wsdl:message name="GetSqueegeeNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSqueegeeNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindSqueegeSoapIn">
+    <wsdl:part name="parameters" element="tns:FindSqueege" />
+  </wsdl:message>
+  <wsdl:message name="FindSqueegeSoapOut">
+    <wsdl:part name="parameters" element="tns:FindSqueegeResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindSteelMeshSoapIn">
+    <wsdl:part name="parameters" element="tns:FindSteelMesh" />
+  </wsdl:message>
+  <wsdl:message name="FindSteelMeshSoapOut">
+    <wsdl:part name="parameters" element="tns:FindSteelMeshResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaterialLinesSoapIn">
+    <wsdl:part name="parameters" element="tns:MaterialLines" />
+  </wsdl:message>
+  <wsdl:message name="MaterialLinesSoapOut">
+    <wsdl:part name="parameters" element="tns:MaterialLinesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MaterialWebServiceSoap">
+    <wsdl:operation name="SearchProducts">
+      <wsdl:input message="tns:SearchProductsSoapIn" />
+      <wsdl:output message="tns:SearchProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPartExist">
+      <wsdl:input message="tns:CheckPartExistSoapIn" />
+      <wsdl:output message="tns:CheckPartExistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOrderItemsById">
+      <wsdl:input message="tns:GetListOrderItemsByIdSoapIn" />
+      <wsdl:output message="tns:GetListOrderItemsByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMaterialOrderItem">
+      <wsdl:input message="tns:FindMaterialOrderItemSoapIn" />
+      <wsdl:output message="tns:FindMaterialOrderItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOrderItemsByIdJson">
+      <wsdl:input message="tns:GetListOrderItemsByIdJsonSoapIn" />
+      <wsdl:output message="tns:GetListOrderItemsByIdJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineStartByLineId">
+      <wsdl:input message="tns:GetLineStartByLineIdSoapIn" />
+      <wsdl:output message="tns:GetLineStartByLineIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMaterialOrder">
+      <wsdl:input message="tns:FindMaterialOrderSoapIn" />
+      <wsdl:output message="tns:FindMaterialOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OperationLogFailed">
+      <wsdl:input message="tns:OperationLogFailedSoapIn" />
+      <wsdl:output message="tns:OperationLogFailedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OperationLogBest">
+      <wsdl:input message="tns:OperationLogBestSoapIn" />
+      <wsdl:output message="tns:OperationLogBestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSteelMesh">
+      <wsdl:input message="tns:GetSteelMeshSoapIn" />
+      <wsdl:output message="tns:GetSteelMeshSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeshNo">
+      <wsdl:input message="tns:GetMeshNoSoapIn" />
+      <wsdl:output message="tns:GetMeshNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSqueegeeNo">
+      <wsdl:input message="tns:GetSqueegeeNoSoapIn" />
+      <wsdl:output message="tns:GetSqueegeeNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSqueege">
+      <wsdl:input message="tns:FindSqueegeSoapIn" />
+      <wsdl:output message="tns:FindSqueegeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSteelMesh">
+      <wsdl:input message="tns:FindSteelMeshSoapIn" />
+      <wsdl:output message="tns:FindSteelMeshSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaterialLines">
+      <wsdl:input message="tns:MaterialLinesSoapIn" />
+      <wsdl:output message="tns:MaterialLinesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MaterialWebServiceSoap" type="tns:MaterialWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchProducts">
+      <soap:operation soapAction="http://tempuri.org/SearchProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPartExist">
+      <soap:operation soapAction="http://tempuri.org/CheckPartExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOrderItemsById">
+      <soap:operation soapAction="http://tempuri.org/GetListOrderItemsById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMaterialOrderItem">
+      <soap:operation soapAction="http://tempuri.org/FindMaterialOrderItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOrderItemsByIdJson">
+      <soap:operation soapAction="http://tempuri.org/GetListOrderItemsByIdJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineStartByLineId">
+      <soap:operation soapAction="http://tempuri.org/GetLineStartByLineId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMaterialOrder">
+      <soap:operation soapAction="http://tempuri.org/FindMaterialOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationLogFailed">
+      <soap:operation soapAction="http://tempuri.org/OperationLogFailed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationLogBest">
+      <soap:operation soapAction="http://tempuri.org/OperationLogBest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteelMesh">
+      <soap:operation soapAction="http://tempuri.org/GetSteelMesh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeshNo">
+      <soap:operation soapAction="http://tempuri.org/GetMeshNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSqueegeeNo">
+      <soap:operation soapAction="http://tempuri.org/GetSqueegeeNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSqueege">
+      <soap:operation soapAction="http://tempuri.org/FindSqueege" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSteelMesh">
+      <soap:operation soapAction="http://tempuri.org/FindSteelMesh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialLines">
+      <soap:operation soapAction="http://tempuri.org/MaterialLines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MaterialWebServiceSoap12" type="tns:MaterialWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchProducts">
+      <soap12:operation soapAction="http://tempuri.org/SearchProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPartExist">
+      <soap12:operation soapAction="http://tempuri.org/CheckPartExist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOrderItemsById">
+      <soap12:operation soapAction="http://tempuri.org/GetListOrderItemsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMaterialOrderItem">
+      <soap12:operation soapAction="http://tempuri.org/FindMaterialOrderItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOrderItemsByIdJson">
+      <soap12:operation soapAction="http://tempuri.org/GetListOrderItemsByIdJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineStartByLineId">
+      <soap12:operation soapAction="http://tempuri.org/GetLineStartByLineId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMaterialOrder">
+      <soap12:operation soapAction="http://tempuri.org/FindMaterialOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationLogFailed">
+      <soap12:operation soapAction="http://tempuri.org/OperationLogFailed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationLogBest">
+      <soap12:operation soapAction="http://tempuri.org/OperationLogBest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteelMesh">
+      <soap12:operation soapAction="http://tempuri.org/GetSteelMesh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeshNo">
+      <soap12:operation soapAction="http://tempuri.org/GetMeshNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSqueegeeNo">
+      <soap12:operation soapAction="http://tempuri.org/GetSqueegeeNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSqueege">
+      <soap12:operation soapAction="http://tempuri.org/FindSqueege" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSteelMesh">
+      <soap12:operation soapAction="http://tempuri.org/FindSteelMesh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialLines">
+      <soap12:operation soapAction="http://tempuri.org/MaterialLines" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MaterialWebService">
+    <wsdl:port name="MaterialWebServiceSoap" binding="tns:MaterialWebServiceSoap">
+      <soap:address location="http://172.28.10.17:99/Service/MaterialWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MaterialWebServiceSoap12" binding="tns:MaterialWebServiceSoap12">
+      <soap12:address location="http://172.28.10.17:99/Service/MaterialWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
